@@ -1,10 +1,13 @@
 # GroupItemDecoration
 ## 通过RecyclerView的ItemDecoration自定义分组列表分割线
+
 ### 实现效果图如下：
 
 <img src="https://raw.githubusercontent.com/MTences/GroupItemDecoration/master/imgs/pic.gif" width=320/>
 <img src="https://raw.githubusercontent.com/MTences/GroupItemDecoration/master/imgs/screen_pic.png" width=320/>
+
 ### 实现原理：
+
 - 继承RecyclerView.ItemDecoration；
 - 重新onDrawOver（）方法，即吸顶实现；
 - 重写getItemOffsets（）方法，即计算分组bar以及普通divider的宽高；
@@ -114,11 +117,5 @@ GroupItemDecoration groupItemDecoration = new GroupItemDecoration(this);
 
 ```
 #### 设置完自己需要的属性后需要Builder一次
-
-
-
-
-
-
 
 
