@@ -168,6 +168,10 @@ public class GroupItemDecoration extends RecyclerView.ItemDecoration {
             groupDividerHeight = groupDivider.getIntrinsicHeight();
         }
 
+        if (textSize > groupDividerHeight){
+            throw new IllegalArgumentException("请检查bar中字体尺寸，bar中字体尺寸不能大于bar的高度！");
+        }
+
         if (dividerDrawble == null){
             paintNormalDivider = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
             paintNormalDivider.setColor(normalDividerColor);
@@ -556,9 +560,9 @@ public class GroupItemDecoration extends RecyclerView.ItemDecoration {
         Matrix matrix=new Matrix();
         float scale;
         if (iconHeight > 0 && iconHeight < groupDividerHeight){
-            scale = bitmap.getHeight()< iconHeight ? iconHeight / (float) bitmap.getHeight() : (float) bitmap.getHeight() / iconHeight;
+            scale = iconHeight/ (float) bitmap.getHeight();
         }else {
-            scale =bitmap.getHeight()<groupDividerHeight?groupDividerHeight/ (float) bitmap.getHeight() : (float) bitmap.getHeight() /groupDividerHeight;
+            scale = groupDividerHeight/ (float) bitmap.getHeight();
         }
         matrix.postScale(scale,scale);
         return Bitmap.createBitmap(bitmap,0,0,bitmap.getWidth(),bitmap.getHeight(),matrix,false);
