@@ -1,6 +1,9 @@
 # GroupItemDecoration
 ## 通过RecyclerView的ItemDecoration自定义分组列表分割线
 
+### 实现效果图如下：
+![image](https://raw.githubusercontent.com/MTences/GroupItemDecoration/master/imgs/pic.gif)
+![image](https://raw.githubusercontent.com/MTences/GroupItemDecoration/master/imgs/screen_pic.png)
 ### 实现原理：
 - 继承RecyclerView.ItemDecoration；
 - 重新onDrawOver（）方法，即吸顶实现；
@@ -59,57 +62,60 @@ GroupItemDecoration groupItemDecoration = new GroupItemDecoration(this);
 ```java
     //设置群组的divider
     setGroupDivider(@DrawableRes int drawableRes)
-    
+
     //设置群组divider的背景颜色，与设置群组的divider互斥，如果同时设置，则以设置的divider为准
     setGroupBackgroundColor(@ColorRes int colorRes)
-    
+
     //设置群组divier的高度
     setGroupDividerHeight(float dimenRes)
-    
+
     //设置群组字体颜色
     setGroupDividerTextColor(@ColorRes int colorRes)
-    
+
     //设置群组字体大小
     setGroupDividerTextSize(float dimenRes)
-    
+
     //设置群组文字gravity
     setGroupDividerTextGravity(int gravity)
-    
+
     //设置群组文字离边距
     setGroupTextMarginLeft(float margin)
-    
+
     //设置群组文字离边距
     setGroupTextMarginRight(float margin)
-    
+
     //设置普通的divider
     setSubDivider(@DrawableRes int drawableRes)
-    
+
     //设置普通的divider的颜色
     setSubDividerColor(@ColorRes int colorRes)
-    
+
     //设置普通divider的高度
     setSubDividerHeight(float dimenRes)
-    
+
     //设置二级divider的margin
     setSubDividerMarginLeft(float margin)
     setSubDividerMarginRight(float margin)
-    
+
     //设置icon图标高度
     setIconHeight(float iconHeight)
-    
+
     //设置icon图标左边边距
-    setIconMarginLeft(float iconMarginLeft) 
-    
+    setIconMarginLeft(float iconMarginLeft)
+
     //设置icon图标右边边距
     setIconMarginRight(float iconMarginRight)
-    
+
     //设置是否需要吸顶
     setNeedCeiling(boolean needCeiling)
-    
+
     //设置是否显示最后一条divider
     setNeedLastDivider(boolean needLastDivider)
-    
+
 ```
 #### 设置完自己需要的属性后需要Builder一次
+
+
+
 
 
