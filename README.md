@@ -15,7 +15,7 @@
  然后在app目录下build.gradle添加
  implementation 'com.github.MTences:GroupItemDecoration:x.y.z'
 
- x.y.z 是版本号，目前最新版本号：1.0.0
+ x.y.z 是版本号，目前最新版本号：1.0.1
 
 ```
 ### 实现原理：
